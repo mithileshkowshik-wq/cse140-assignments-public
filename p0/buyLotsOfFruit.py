@@ -29,6 +29,16 @@ def buyLotsOfFruit(orderList):
     """
 
     # *** Your Code Here ***
+    TotalCost = 0
+    for i in range(0, len(orderList)):
+        for key in FRUIT_PRICES.keys():
+            if orderList[i][0] == key:
+                TotalCost = TotalCost + (orderList[i][1]*FRUIT_PRICES[key])
+
+    if TotalCost is not None:
+        return TotalCost
+    else:
+        return None
 
     return None
 
