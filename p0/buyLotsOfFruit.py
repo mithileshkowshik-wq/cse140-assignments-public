@@ -40,7 +40,6 @@ def buyLotsOfFruit(orderList):
     else:
         return None
 
-    return None
 
 def main():
     orderList = [

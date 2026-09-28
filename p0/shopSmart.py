@@ -20,8 +20,20 @@ def shopSmart(orderList, fruitShops):
     """
 
     # *** Your Code Here ***
+    # given the order list I have to calculate the price of the fruits in each shop
+    # return the shop with the lower price
 
-    return None
+    minCost = float('inf')
+    cheapShop = fruitShops[0]
+    for i in range(0, len(fruitShops)):
+        if fruitShops[i].getPriceOfOrder(orderList) < minCost:
+            minCost = fruitShops[i].getPriceOfOrder(orderList)
+            cheapShop = fruitShops[i]
+    
+    return cheapShop
+    
+
+
 
 def main():
     dir1 = {
